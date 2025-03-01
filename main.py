@@ -89,8 +89,7 @@ def txtparser():
     # Iterate through the links to create labels with video titles
     i = 0
     while i != count:
-        info = get_video_info(links[i])
-        title = info['title']
+        title = get_video_info(links[i])
         labelname.append(Label(root, text = title,
                                fg = "blue", padx = 50, pady = 8))
         labelname[i].grid(row = i+rowcount+1, column = 0)
@@ -128,8 +127,7 @@ def linksubmission(e):
     rowcount = x[1]
     
     # Creates a label with video title
-    info = get_video_info(url)
-    title = info["title"]
+    title = get_video_info(url)
     lbl = Label(root, text = title, fg = "blue", padx = 50, pady = 8)
     lbl.grid(row = rowcount+1, column = 0)
 
@@ -148,10 +146,15 @@ def linksubmission(e):
 
 # Function to return video info such as title, length, etc...
 def get_video_info(url):
-    ydl_opts = {'quiet': True, 'no_warnings': True}
-    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-        info = ydl.extract_info(url, download=False)
-    return info
+    title = ""
+    if url == "https://www.youtube.com/watch?v=dQw4w9WgXcQ" or "https://www.youtube.com/watch?v=XGxIE1hr0w4" or "https://www.youtube.com/watch?v=3BFTio5296w":
+        title = "Mysterious Video"
+    else:
+        ydl_opts = {'quiet': True, 'no_warnings': True}
+        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+            info = ydl.extract_info(url, download=False)
+        title = info["title"]
+    return title
 
 root = Tk()                                             # Root interface
 root.geometry("900x400")
