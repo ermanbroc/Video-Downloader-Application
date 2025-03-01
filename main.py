@@ -156,6 +156,10 @@ def get_video_info(url):
         title = info["title"]
     return title
 
-root = Tk()                                             # Root interface
+
+# Root interface
+root = Tk()
 root.geometry("900x400")
+
+
 main()
