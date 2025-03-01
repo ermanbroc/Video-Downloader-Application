@@ -16,6 +16,10 @@ In order to fuel a hobby of making mashups, I developed this to avoid downloadin
 
 Need to test application on an alternate machine to determine.
 
+### Example
+
+Run the program, and either download [example.txt](example.txt) and open it with the program or try typing https://www.youtube.com/watch?v=dQw4w9WgXcQ in the search bar.
+
 ### Features in Progress
 
 | Priority | Feature                                        |
