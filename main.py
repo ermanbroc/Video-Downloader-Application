@@ -147,13 +147,10 @@ def linksubmission(e):
 # Function to return video info such as title, length, etc...
 def get_video_info(url):
     title = ""
-    if url == "https://www.youtube.com/watch?v=dQw4w9WgXcQ" or "https://www.youtube.com/watch?v=XGxIE1hr0w4" or "https://www.youtube.com/watch?v=3BFTio5296w":
-        title = "Mysterious Video"
-    else:
-        ydl_opts = {'quiet': True, 'no_warnings': True}
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(url, download=False)
-        title = info["title"]
+    ydl_opts = {'quiet': True, 'no_warnings': True}
+    with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        info = ydl.extract_info(url, download=False)
+    title = info["title"]
     return title
 
 
