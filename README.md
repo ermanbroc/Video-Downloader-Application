@@ -16,7 +16,7 @@ Developed to avoid the use of downloading videos from unfamiliar websites.
 
 Must have the latest Python version installed.
 
-Using pip, install the required python packages to the computer or use a virtual environment. Install packages by running `pip install yt_dlp`, or download requirements.txt and run `pip install -r pathname\requirements.txt`.
+Using pip, install the required python packages to the computer or use a virtual environment. Install packages by running `pip install yt_dlp`, or download [requirements.txt](requirements.txt) and run `pip install -r pathname\requirements.txt`.
 
 ### Example
 
